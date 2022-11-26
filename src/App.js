@@ -62,7 +62,7 @@ function App() {
   }, [setInput]);
 
   return (
-    <body>
+    <>
       <header>
         <figure>
           <img src="/logo192.png" alt="brand logo" />
@@ -87,7 +87,7 @@ function App() {
           xLabel="TEMP (°C)"
         />
       </main>
-    </body>
+    </>
   );
 }
 

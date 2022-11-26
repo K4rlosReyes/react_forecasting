@@ -1,5 +1,5 @@
 // const BASE_URL = 'http://opt.uvigo.es'
-const BASE_URL = 'http://localhost:5000'
+const BASE_URL = process.env.REACT_APP_IS_LOCAL === 'true' ? 'http://localhost:5000' : ''
 
 /**
  * @param {string[][]} arr
