@@ -18,14 +18,14 @@ BASE_URL = "http://opt.uvigo.es"
 def index():
     return send_file('web/index.html')
 
-@app.route('/results')
+@app.route('/forecast')
 def get_results():
-    return requests.get(url = f"{BASE_URL}/results").json()
-
-@app.route('/input')
-def get_input():
-    return requests.get(url = f"{BASE_URL}/input").json()
+    return requests.get(url = f"{BASE_URL}/forecast").json()
 
 @app.route('/real')
-def get_real():
+def get_input():
     return requests.get(url = f"{BASE_URL}/real").json()
+
+@app.route('/prevforecast')
+def get_real():
+    return requests.get(url = f"{BASE_URL}/prevforecast").json()
